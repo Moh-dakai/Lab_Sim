@@ -1,6 +1,6 @@
 from flask import Blueprint, request
 
-from backend.services.simulations import (
+from services.simulations import (
     simulate_hookes_law,
     simulate_ohms_law,
     simulate_projectile_motion,

@@ -1,6 +1,6 @@
 from flask import Blueprint, request
 
-from backend.services.ai_explainer import generate_explanation
+from services.ai_explainer import generate_explanation
 
 explain_bp = Blueprint("explain", __name__)
 
