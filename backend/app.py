@@ -3,8 +3,8 @@ import os
 from flask import Flask, send_from_directory
 from flask_cors import CORS
 
-from backend.routes.explain import explain_bp
-from backend.routes.simulations import simulations_bp
+from routes.explain import explain_bp
+from routes.simulations import simulations_bp
 
 
 def create_app() -> Flask:

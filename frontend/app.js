@@ -1,4 +1,5 @@
 const { useEffect, useMemo, useRef, useState } = React;
+const API_URL = "https://lab-sim.onrender.com/";
 
 const experiments = {
   ohms: {
@@ -90,7 +91,7 @@ function App() {
     setExplanation("");
 
     try {
-      const response = await fetch(experimentConfig.endpoint, {
+      const response = await fetch(`${API_URL}${experimentConfig.endpoint}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formValues),
@@ -118,7 +119,7 @@ function App() {
     setError("");
 
     try {
-      const response = await fetch("/explain", {
+      const response = await fetch(`${API_URL}/explain`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
